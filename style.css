@@ -1,0 +1,25 @@
+html{
+    box-sizing: border-box;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+body{
+    transition: 0.25s;
+}
+.container{
+    padding: 0 5%;
+}
+.inner-container{
+    padding: 5%;
+    border: 1px solid red;
+}
+body.dark, #innerThemeswitch:checked + .inner-container, body.dark #innerThemeswitch:checked + .inner-container{
+    color: canvas;
+    background-color: canvasText;
+}
+#innerThemeswitch + .inner-container,
+body.dark #innerThemeswitch + .inner-container {
+  color: canvasText;
+  background-color: canvas;
+}
